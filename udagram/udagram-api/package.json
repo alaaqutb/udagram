@@ -14,7 +14,7 @@
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && npx tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && bestzip Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm run build && eb list && eb use udagram-api-dev && eb deploy"
+    "deploy": "npm install && npm run build && eb list && eb use udagram-api-dev && eb deploy"
   },
   "keywords": [],
   "author": "Gabriel Ruttner",
