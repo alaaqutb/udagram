@@ -57,7 +57,7 @@ jobs:
       - run:
           name: Init of EB and passing
           command: |
-            npm run ebInit && npm run ebPass
+            npm run ebPass
       - run:
           name: Deploy Back-end
           # TODO: install, build, deploy backend
